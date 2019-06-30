@@ -27,23 +27,23 @@ $(document).ready(function($) {
       scroll_top_duration
     );
   });
-  $('.nav-item.dropdown').mouseenter(function() {
-    $('.nav-item.dropdown').addClass('show');
-    $('.dropdown-menu').addClass('show');
-  });
+  // $('.nav-item.dropdown').mouseenter(function() {
+  //   $('.nav-item.dropdown').addClass('show');
+  //   $('.dropdown-menu').addClass('show');
+  // });
 
-  $('.nav-item.dropdown')
-    .mouseleave(function() {
-      $('.nav-item.dropdown').removeClass('show');
-      $('.dropdown-menu').removeClass('show');
-    })
-    .mouseleave(); //trigger mouseleave to hide second div in beginning
+  // $('.nav-item.dropdown')
+  //   .mouseleave(function() {
+  //     $('.nav-item.dropdown').removeClass('show');
+  //     $('.dropdown-menu').removeClass('show');
+  //   })
+  //   .mouseleave(); //trigger mouseleave to hide second div in beginning
 });
 
 // Slide
 $('.owl-carousel').owlCarousel({
   loop: true,
-  autoplay: false,
+  autoplay: true,
   autoplayTimeout: 5000,
   autoplayHoverPause: true,
   dots: false,
