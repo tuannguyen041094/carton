@@ -1065,3 +1065,7 @@ header.bg-dark {
 .navbar-toggler {
     padding: 4px 8px;
 }
+.mail-title {
+  font-size: 26px;
+  font-weight: bold;
+}
