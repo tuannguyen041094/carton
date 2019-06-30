@@ -43,10 +43,10 @@ $(document).ready(function($) {
 // Slide
 $('.owl-carousel').owlCarousel({
   loop: true,
-  margin: 10,
-  autoplay: true,
+  autoplay: false,
   autoplayTimeout: 5000,
   autoplayHoverPause: true,
+  dots: false,
   responsive: {
     0: {
       items: 1,
@@ -64,7 +64,6 @@ $('.owl-carousel').owlCarousel({
 });
 $('.owl-carousel .contact').owlCarousel({
   loop: true,
-  margin: 10,
   dot: false,
   autoplay: true,
   autoplayTimeout: 5000,
