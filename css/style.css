@@ -9,7 +9,8 @@ a.cd-top {
   position: fixed;
   bottom: 56px;
   right: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   /* image replacement properties */
   overflow: hidden;
   text-indent: 100%;
@@ -20,14 +21,14 @@ a.cd-top {
   visibility: hidden;
   opacity: 0;
   -webkit-transition: opacity 0.3s 0s, visibility 0s 0.3s;
-  -moz-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+  -o-transition: opacity 0.3s 0s, visibility 0s 0.3s;
   transition: opacity 0.3s 0s, visibility 0s 0.3s;
 }
 a.cd-top.cd-is-visible,
 a.cd-top.cd-fade-out,
 .no-touch a.cd-top:hover {
   -webkit-transition: opacity 0.3s 0s, visibility 0s 0s;
-  -moz-transition: opacity 0.3s 0s, visibility 0s 0s;
+  -o-transition: opacity 0.3s 0s, visibility 0s 0s;
   transition: opacity 0.3s 0s, visibility 0s 0s;
 }
 a.cd-top,
@@ -90,7 +91,8 @@ a.cd-top.cd-fade-out {
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 body {
   font-size: 16px;
@@ -108,7 +110,8 @@ header .navbar .navbar-nav .nav-item {
   border: 1px solid #f3f1f1;
   padding-bottom: 25px;
   background-color: #fff;
-  box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.1);
 }
 .header-scroll {
   position: fixed;
@@ -145,10 +148,14 @@ header .navbar .navbar-nav .nav-item .nav-link.active {
 }
 header .navbar .navbar-nav .nav-item:hover .nav-link {
   color: rgba(182, 112, 42, 1);
+  -webkit-transition: all 0.6s;
+  -o-transition: all 0.6s;
   transition: all 0.6s;
 }
 
 header .navbar .navbar-nav .nav-item::before {
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
   transition: all 0.5s;
   content: "";
   position: absolute;
@@ -170,7 +177,8 @@ header .navbar .navbar-nav .nav-item:hover::before {
 .foot .foot-content {
   padding-top: 32px;
   padding-bottom: 32px;
-  animation-duration: 3s;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
 }
 .foot .foot-content h2 {
   margin-bottom: 16px;
@@ -349,7 +357,6 @@ header .navbar .navbar-nav .nav-item:hover::before {
 .owl-carousel .owl-nav .owl-prev {
   cursor: pointer;
   -webkit-user-select: none;
-  -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
@@ -384,6 +391,7 @@ header .navbar .navbar-nav .nav-item:hover::before {
 }
 .owl-carousel.owl-grab {
   cursor: move;
+  cursor: -webkit-grab;
   cursor: grab;
 }
 .owl-carousel.owl-rtl {
@@ -393,8 +401,10 @@ header .navbar .navbar-nav .nav-item:hover::before {
   float: right;
 }
 .owl-carousel .animated {
-  animation-duration: 1s;
-  animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 .owl-carousel .owl-animated-in {
   z-index: 0;
@@ -403,7 +413,16 @@ header .navbar .navbar-nav .nav-item:hover::before {
   z-index: 1;
 }
 .owl-carousel .fadeOut {
-  animation-name: fadeOut;
+  -webkit-animation-name: fadeOut;
+          animation-name: fadeOut;
+}
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 @keyframes fadeOut {
   0% {
@@ -414,10 +433,14 @@ header .navbar .navbar-nav .nav-item:hover::before {
   }
 }
 .owl-height {
+  -webkit-transition: height 0.5s ease-in-out;
+  -o-transition: height 0.5s ease-in-out;
   transition: height 0.5s ease-in-out;
 }
 .owl-carousel .owl-item .owl-lazy {
   opacity: 0;
+  -webkit-transition: opacity 0.4s ease;
+  -o-transition: opacity 0.4s ease;
   transition: opacity 0.4s ease;
 }
 .owl-carousel .owl-item .owl-lazy:not([src]),
@@ -425,7 +448,8 @@ header .navbar .navbar-nav .nav-item:hover::before {
   max-height: 0;
 }
 .owl-carousel .owl-item img.owl-lazy {
-  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
 }
 .owl-carousel .owl-video-wrapper {
   position: relative;
@@ -444,11 +468,16 @@ header .navbar .navbar-nav .nav-item:hover::before {
   cursor: pointer;
   z-index: 1;
   -webkit-backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 0.1s ease;
+  transition: -webkit-transform 0.1s ease;
+  -o-transition: transform 0.1s ease;
   transition: transform 0.1s ease;
+  transition: transform 0.1s ease, -webkit-transform 0.1s ease;
 }
 .owl-carousel .owl-video-play-icon:hover {
   -ms-transform: scale(1.3, 1.3);
-  transform: scale(1.3, 1.3);
+  -webkit-transform: scale(1.3, 1.3);
+          transform: scale(1.3, 1.3);
 }
 .owl-carousel .owl-video-playing .owl-video-play-icon,
 .owl-carousel .owl-video-playing .owl-video-tn {
@@ -460,6 +489,8 @@ header .navbar .navbar-nav .nav-item:hover::before {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
+  -webkit-transition: opacity 0.4s ease;
+  -o-transition: opacity 0.4s ease;
   transition: opacity 0.4s ease;
 }
 .owl-carousel .owl-video-frame {
@@ -493,8 +524,10 @@ header .navbar .navbar-nav .nav-item:hover::before {
 
 .services .services-content {
   margin-top: 50px;
-  animation-duration: 2s;
-  animation-delay: 1s;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
 .services .services-content .row .card {
@@ -560,7 +593,8 @@ header .navbar .navbar-nav .nav-item:hover::before {
 
 .latest-content {
   margin-top: 50px;
-  animation-duration: 2s;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
 }
 
 .latest-content .row img {
@@ -569,9 +603,12 @@ header .navbar .navbar-nav .nav-item:hover::before {
 }
 
 .latest-content .row div:hover img {
-  animation-name: pulse;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
+  -webkit-animation-name: pulse;
+          animation-name: pulse;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 
 /* ----------------- DANH SÁCH SẢN PHẨM --------------- */
@@ -973,11 +1010,14 @@ header .navbar .navbar-nav .nav-item:hover::before {
   background: #b6702a;
   height: 1px;
   -webkit-transition-property: left, right;
+  -o-transition-property: left, right;
   transition-property: left, right;
   -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+     transition-duration: 0.3s;
   -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out;
+  -o-transition-timing-function: ease-out;
+     transition-timing-function: ease-out;
 }
 .product-item:hover:before,
 .product-item:focus:before,
