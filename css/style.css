@@ -668,32 +668,6 @@ header .navbar .navbar-nav .nav-item:hover::before {
   a {
   color: rgba(182, 112, 42, 1);
 }
-
-.list-products
-  .list-content
-  .list-content-left
-  .new-post:nth-child(3)
-  .new-post-content
-  ul
-  li
-  a {
-  color: #55657a;
-  border: 2px solid #dddd;
-}
-
-.list-products
-  .list-content
-  .list-content-left
-  .new-post:nth-child(3)
-  .new-post-content
-  ul
-  li:hover
-  a {
-  color: #fff;
-  border: 2px solid rgba(182, 112, 42, 1);
-  background-color: #b6702a;
-}
-
 .list-products .list-content .list-content-right .new-post {
   background-color: #fff;
 }
@@ -834,7 +808,20 @@ header.bg-dark {
   margin: 0;
 }
 .post-time {
+  max-width: 60px;
   min-width: 60px;
+  margin-bottom: 8px;
+}
+.post-time-date {
+  background-color: #ECECEC;
+  min-width: 60px;
+  text-align: center;
+}
+.post-time-month {
+  background-color: #B6702A;
+  color: #fff;
+  min-width: 60px;
+  text-align: center;
 }
 @media screen and (max-width: 768px) {
   /* --------- Trang chủ --------  */
@@ -929,6 +916,7 @@ header.bg-dark {
     max-width: 100%;
     padding-left: 0;
     padding-right: 0;
+    background: #343a40;
     padding-bottom: 0;
   }
   .header {
@@ -1108,4 +1096,63 @@ input.form-control {
 }
 textarea.form-control {
   border-radius: 2px;
+}
+.product-list {
+  padding: 16px 0;
+}
+.product-list .categories {
+margin-top: 8px;
+}
+.product-list .categories a {
+  color: #49616b;
+  text-decoration: none;
+}
+.badge.badge-light {
+  text-decoration: none;
+  font-size: 12px;
+  padding: 10px;
+  display: inline-block;
+}
+.badge.badge-light:hover {
+  color: #bd7e3f;
+}
+.product-tag {
+  list-style: none;
+  margin-top: 25px
+
+}
+.product-tag li{
+  display: inline-block;
+  margin-left: 4px
+}
+.new-post-content h3,.recent-post-content h3 {
+    font-size: 18px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #000;
+    border-bottom:2px solid #8F8F8F;
+    padding-bottom:10px;
+}
+.new-post-content,.recent-post-content {
+  font-size: 14px;
+}
+.recent-post-content a
+{
+  color: #55657a;
+}
+.recent-post-content a:hover
+{
+  color: rgba(182, 112, 42, 1);;
+}
+.new-post-content a:hover,.recent-post-content a:hover{
+  text-decoration: none;
+}
+.post .title , .product-list .title {
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.product-detail .name {
+  font-weight: bold;
 }
